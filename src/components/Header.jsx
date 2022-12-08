@@ -12,7 +12,10 @@ const Header = () => {
     ]
   return (
 <header>
-    <h1>    Book Management</h1>
+  <div className='header-titles'>
+    <h1>Book Management</h1>
+    <h3>Manage your books in one place</h3>
+    </div>
     <nav>
       {
         navigation.map(nav => (

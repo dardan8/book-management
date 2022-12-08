@@ -2,19 +2,17 @@ import React from "react";
 import { useState } from "react";
 import {v4 as uuidv4} from 'uuid';
 
-const BookForm = ({handleSubmit}) => {
+const BookForm = ({book, handleSubmit}) => {
 
     const [bookState, setBookState] = useState({
-        name: " ",
-        author: " ",
-        price: " ",
+        name: book ? book.name : " ",
+        author: book ? book.author : " ",
+        price: book ? book.price : " ",
     });
 
-    console.log(bookState);
 
     const handleChange = (e) => {
         setBookState({
-            id: uuidv4(),
             ...bookState,
             [e.target.name]: e.target.value,
         })
@@ -24,24 +22,26 @@ const BookForm = ({handleSubmit}) => {
    const onSubmit = (e) => {
     e.preventDefault();
     handleSubmit({
+      id: uuidv4(),
         ...bookState,
         date: new Date()
     });
+    setBookState({name: "", author: "", price: ""})
    } 
 
-  const renderInputField = (label, placeholder, name) => (
+  const renderInputField = (label, placeholder, namef) => (
     <div className="inputField">
       <label>{label}</label>
-      <input value={bookState[name]} onChange={handleChange} type="text" name={name} placeholder={placeholder} />
+      <input value={bookState[name]} onChange={handleChange} type="text" placeholder={placeholder} name={namef}  />
     </div>
   );
 
   return (
     <form onSubmit={onSubmit} className="form">
-      {renderInputField("Book Name", "Enter Book Name...", "name")}
-      {renderInputField("Book Author", "Enter Book Author...", "author")}
-      {renderInputField("Book Price", "Enter Book Price...", "price")}
-    <button className="btnForm" type="submit"> Submit</button>
+      {renderInputField("Book Name", "Enter book name...", "name")}
+      {renderInputField("Book Author", "Enter book author...", "author")}
+      {renderInputField("Book Price", "Enter book price...", "price")}
+    <button className="btnForm" type="submit"> {book ? "Update" : "Add"}</button>
     </form>
   );
 };
