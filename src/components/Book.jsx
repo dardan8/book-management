@@ -1,23 +1,34 @@
 import React from "react";
 import {useNavigate} from "react-router-dom"
+import { RiDeleteBinLine, RiEditBoxLine } from "react-icons/ri";
+
 
 const Book = ({ book , handleRemoveBook}) => {
-
 const navigate = useNavigate();
+
+
 const { id, name, author, price, date } = book;
 
   return (
-    <div>
-      <div>
-        <p>Author: {author}</p>
-        <p>Price: {price}</p>
-        <p>Date: {new Date(date).toDateString()}</p>
+    <div className="book-card">
+      <div className="book-data">
+        <p><span className="text-data">Name:</span> {name}</p>
+        <p><span className="text-data">Author:</span>  {author}</p>
+        <p><span className="text-data">Price: </span> {price}</p>
       </div>
-      <div>
-        <button onClick={() => navigate(`/edit/${id}`)}> Edit </button>
+      <p className="text-date">Date added: {new Date(date).toDateString()}</p>
+      <hr/>
+      <div className="book-card-buttons">
+        <RiDeleteBinLine 
+        className="delete-icon"
+        onClick={() => handleRemoveBook(id)}  />
 
-        <button onClick={() => handleRemoveBook(id)}> Delete</button>
+        <RiEditBoxLine 
+        className="edit-icon"
+        onClick={() => navigate(`/edit/${id}`)}
+         />
       </div>
+
     </div>
   );
 };

@@ -5,10 +5,10 @@ const Header = () => {
 
     const navigation = [
     {path: '/',
-    name: 'List Book'},
+    name: 'View Books'},
 
     {path: '/add',
-    name: 'Add Book'}
+    name: 'Add New Book'}
     ]
   return (
 <header>
