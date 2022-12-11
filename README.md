@@ -18,3 +18,14 @@ Navlink is a special type of Router Link item that knows if it's active or not.
 If it's active active class is added which is then used to style the element
 
 #### 2. Book List
+
+We get the book state from the Context. If there are no books inside the array, a message to Add Books is rendered.
+Otherwise, we map the books and render them.
+
+#### 3. Book Component
+
+Here the book card is created.
+The book state and handleRemoveBook functions are received as state.
+If Edit is clicked we go to the EditBook component. If delete is clicked, the handleRemoveBook function filters the book array and removes the id that matches. Then sets the new state with the filtered array.
+
+#### 4. Add Book

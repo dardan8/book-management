@@ -10,7 +10,9 @@ const Header = () => {
     {path: '/add',
     name: 'Add New Book'}
     ]
+    
   return (
+
 <header>
   <div className='header-titles'>
     <h1>Book Management</h1>
