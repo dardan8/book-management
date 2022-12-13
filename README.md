@@ -1,6 +1,7 @@
 # Book management system
 
 Book management system with ReactJS, React Router, Context hook and Local Storage
+by Dardan D.
 
 ## How it works?
 
@@ -29,3 +30,36 @@ The book state and handleRemoveBook functions are received as state.
 If Edit is clicked we go to the EditBook component. If delete is clicked, the handleRemoveBook function filters the book array and removes the id that matches. Then sets the new state with the filtered array.
 
 #### 4. Add Book
+
+Displays the BookForm component that is used to add the books.
+It also has a handle submit function that adds the new book to the state.
+
+#### 5. BookForm
+
+Book Form component gets two props: book and handleSubmit
+We declare a state that bookState that handles the state of the book in the form fields.
+It contains the parameters name, author and price. It gets the initial value from the book object received as a prop.
+If the book object exits, so it's received as a prop, it sets the bookState values to these values. If it's empty it leaves them empty.
+
+renderInputField is the compontent that renders the input fields for the form. It accepts label, placeholder and name as parameters and
+renders them accordingly. It also has the function handleChange, where it sets the bookState object to the values of the data being entered.
+
+The BookForm component returns the form with the rendered input fields.
+It uses the onSubmit function, which itself takes the handleSubmit function that was passed as a prop.
+The function sets the id to the bookState object, the date and spreads the existing bookState values.
+Then it sets the bookState state to empty values.
+
+The handleOnSubmit function that comes from the AddBook component takes a book object as a parameter and sets the main books object state that comes from the BookContext. Finally it forces the user to navigate to the main page using the useNavigate() from react router.
+
+#### 6. EditBook
+
+EditBook is rendered in the /edit/:id path every time the Edit icon in clicked in the book component.
+EditBook component displays the BookForm component again. But this time the book and handleSubmit props are different.
+The book object is passed as the books that needs to be edited. bookToEdit object filters the books object from the BookContext and only keeps the book where the id matches the id objects that we get from the url via the useParams function of react router.
+
+the handleOnSubmit function in this case filters the books object and removes the item that matches the id of the selected one.
+Then the state of the books object is set to this filtered array, and the edited book is added on top.
+
+## Book Context
+
+Book Provider has the books state and setBooks function. It initially gets the values from the local storage, if the object exits there.

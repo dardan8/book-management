@@ -7,7 +7,9 @@ const AddBook = () => {
 
   const navigate = useNavigate();
   const { books, setBooks } = useContext(BookContext);
-  
+
+  // On submit the new book is added to the state and the rest of the books are spread into the state object
+
   const handleOnSubmit = (book) => {
     setBooks([book, ...books]);
     navigate("/");

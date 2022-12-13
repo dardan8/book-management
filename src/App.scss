@@ -29,7 +29,7 @@ header {
 
 .header-titles {
 width: 100%;
-background: #f4f4f4;
+background: #f4f4f4b0;
 
 min-height: 20rem;
 
@@ -38,7 +38,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 box-sizing: border-box;
-padding: 3rem 0;
+padding: 5rem 0;
 
 
 h1 {
@@ -111,49 +111,101 @@ nav > .active {
   width: 30%;
 }
 
+.editBook {
+  width: 30%;
+
+  form .btnForm {
+    background-color: rgb(238, 171, 150);
+    border: none;
+    border-radius: 6px;
+    
+    color: white;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    
+    cursor: pointer;
+    
+    }
+
+    .inputfield input {
+
+      border: 2px solid rgb(238, 171, 150);
+    
+     }
+}
+
+
+
 .form {
   width: 100%;
 }
 
-.inputField {
+.inputfield {
   display: flex;
   flex-direction: column;
 
   gap: 0.5rem;
   margin-bottom: 1rem;
+
 }
 
 
-.inputField input {
+.inputfield input {
  padding: 0.3rem 1rem 0.3rem 0;
  text-indent: 0.5rem;
 
  width: 100%;
  height: 3rem;
+ border: 2px solid #80c4da;
+ border-radius: 8px;
+ color: rgb(96, 96, 96);
+ font-size: 1rem;
 }
 
-.form .btnForm {
-background-color: black;
-border: 1px solid black;
+.inputfield {
+
+  label {
+    font-size: 0.8rem;
+    color: rgba(51, 51, 51, 0.695);
+  }
+  
+input::placeholder {
+color: #6baec476; 
+font-weight: 400;
+font-size: 0.9rem;
+
+}
+
+:focus {
+  outline: none;
+  border: 2px solid rgb(123,203,141);
+}
+}
+
+form .btnForm {
+background-color: #80c4da;
+border: none;
+border-radius: 6px;
+
 color: white;
 width: 100%;
-padding: 0.5rem 1rem;
-font-size: 1rem;
-cursor: pointer;
+padding: 0.8rem 2rem;
+font-size: 1.1rem;
 margin-top: 1rem;
+
+cursor: pointer;
+
 }
 
-.form .btnForm:disabled {
-  background: #ddd;
-  border: 1px solid #ddd;
-  cursor: default;
-}
 
 /*Book List*/
 
 .listBook {
-  width: 100%;
+  width: 80%;
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   align-items: flex-start;
   justify-content: center;
@@ -173,6 +225,9 @@ margin-top: 1rem;
 .book-card {
   display: flex;
   flex-direction: column;
+  width: 15rem;
+  align-self: stretch;
+
   gap: 2rem;
   background-color: #fff;
   padding: 1rem;
