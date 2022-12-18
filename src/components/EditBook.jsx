@@ -21,7 +21,7 @@ const EditBook = () => {
   const handleOnSubmit = (book) => {
     const filteredBook = books.filter((book) => book.id !== id);
     setBooks([book, ...filteredBook]);
-    navigate("/");
+    navigate("/book-management/");
   };
 
   return (

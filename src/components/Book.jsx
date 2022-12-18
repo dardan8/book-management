@@ -30,7 +30,7 @@ const Book = ({ book, handleRemoveBook }) => {
 
         <RiEditBoxLine
           className="edit-icon"
-          onClick={() => navigate(`/edit/${id}`)}
+          onClick={() => navigate(`/book-management/edit/${id}`)}
         />
       </div>
     </div>

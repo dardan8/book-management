@@ -17,9 +17,9 @@ function App() {
   <BookProvider> 
    <Header/>
    <Routes>
-    <Route path ='/' element={<BookList />}/>
-    <Route path ='/add' element={<AddBook />}/>
-    <Route path='/edit/:id' element={<EditBook />} />
+    <Route path ='/book-management/' element={<BookList />}/>
+    <Route path ='/book-management/add/' element={<AddBook />}/>
+    <Route path='/book-management/edit/:id' element={<EditBook />} />
    </Routes>
    </BookProvider> 
     </div>

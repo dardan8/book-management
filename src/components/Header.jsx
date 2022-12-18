@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom'
 const Header = () => {
 
     const navigation = [
-    {path: '/',
+    {path: '/book-management/',
     name: 'View Books'},
 
-    {path: '/add',
+    {path: '/book-management/add',
     name: 'Add New Book'}
     ]
     

@@ -12,7 +12,7 @@ const AddBook = () => {
 
   const handleOnSubmit = (book) => {
     setBooks([book, ...books]);
-    navigate("/");
+    navigate("/book-management/");
   };
 
   return (
