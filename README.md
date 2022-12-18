@@ -3,6 +3,8 @@
 Book management system with ReactJS, React Router, Context hook and Local Storage
 by Dardan D.
 
+Check it out live at http://dardan8.github.io/book-management
+
 ## How it works?
 
 You can navigate to 2 pages: _View Books_ and _Add New Book_
