@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .container {
@@ -28,43 +27,43 @@ header {
 }
 
 .header-titles {
-width: 100%;
-background: #f4f4f4b0;
+  width: 100%;
+  background: url(/src/assets/Header.png);
+  min-height: 400px;
+  animation: pan 5s infinite alternate linear;
 
-min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 7rem 0;
 
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-box-sizing: border-box;
-padding: 5rem 0;
-
-
-h1 {
-  font-size: 3.5rem;
-  background: rgb(123,203,141);
-background: linear-gradient(90deg, rgba(123,203,141,1) 0%, rgba(128,196,218,1) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+  h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(
+      90deg,
+      rgb(166, 159, 159) 0%,
+      #80c4da 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h3 {
+    font-size: 1.5rem;
+    background: linear-gradient(
+      90deg,
+      #80c4da 0%,
+      rgb(122, 123, 134) 100%,
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
-h3 {
-  font-size: 1.5rem;
-  background: rgb(123,203,141);
-  background: linear-gradient(90deg, rgba(123,203,141,1) 0%, rgba(128,196,218,1) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
-}
-
-}
-
-
- nav {
-
+nav {
   margin: 2rem 0rem;
 
   display: flex;
@@ -78,7 +77,6 @@ h3 {
   background-color: #f4f4f4;
   padding: 0.5rem 0.65rem;
   border: 1px solid #efefef;
-
 }
 
 nav > a {
@@ -94,16 +92,13 @@ nav > a {
   font-size: 1.2rem;
 }
 nav > .active {
-  
   background: #80c4da;
   color: white;
   border-radius: 3rem;
   border: 1px solid #d3d3d3;
 
-  box-shadow: 3px 15px 9px -15px rgba(0,0,0,0.37);
-
+  box-shadow: 3px 15px 9px -15px rgba(0, 0, 0, 0.37);
 }
-
 
 /* Add Form  */
 
@@ -118,25 +113,20 @@ nav > .active {
     background-color: rgb(238, 171, 150);
     border: none;
     border-radius: 6px;
-    
+
     color: white;
     width: 100%;
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
     margin-top: 1rem;
-    
+
     cursor: pointer;
-    
-    }
+  }
 
-    .inputfield input {
-
-      border: 2px solid rgb(238, 171, 150);
-    
-     }
+  .inputfield input {
+    border: 2px solid rgb(238, 171, 150);
+  }
 }
-
-
 
 .form {
   width: 100%;
@@ -148,57 +138,51 @@ nav > .active {
 
   gap: 0.5rem;
   margin-bottom: 1rem;
-
 }
 
-
 .inputfield input {
- padding: 0.3rem 1rem 0.3rem 0;
- text-indent: 0.5rem;
+  padding: 0.3rem 1rem 0.3rem 0;
+  text-indent: 0.5rem;
 
- width: 100%;
- height: 3rem;
- border: 2px solid #80c4da;
- border-radius: 8px;
- color: rgb(96, 96, 96);
- font-size: 1rem;
+  width: 100%;
+  height: 3rem;
+  border: 2px solid #80c4da;
+  border-radius: 8px;
+  color: rgb(96, 96, 96);
+  font-size: 1rem;
 }
 
 .inputfield {
-
   label {
     font-size: 0.8rem;
     color: rgba(51, 51, 51, 0.695);
   }
-  
-input::placeholder {
-color: #6baec476; 
-font-weight: 400;
-font-size: 0.9rem;
 
-}
+  input::placeholder {
+    color: #6baec476;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
 
-:focus {
-  outline: none;
-  border: 2px solid rgb(123,203,141);
-}
+  :focus {
+    outline: none;
+    border: 2px solid rgb(123, 203, 141);
+  }
 }
 
 form .btnForm {
-background-color: #80c4da;
-border: none;
-border-radius: 6px;
+  background-color: #80c4da;
+  border: none;
+  border-radius: 6px;
 
-color: white;
-width: 100%;
-padding: 0.8rem 2rem;
-font-size: 1.1rem;
-margin-top: 1rem;
+  color: white;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 
-cursor: pointer;
-
+  cursor: pointer;
 }
-
 
 /*Book List*/
 
@@ -234,67 +218,68 @@ cursor: pointer;
   border-radius: 1rem;
   border: 1px solid #e3e3e3;
   color: #333;
-  box-shadow:
-rgb(0 0 0 / 4%) 0px 4px 5px 0px,
-rgb(0 0 0 / 2%) 0px 3px 14px 3px,
-rgb(0 0 0 / 1%) 0px 8px 10px 1px;
+  box-shadow: rgb(0 0 0 / 4%) 0px 4px 5px 0px, rgb(0 0 0 / 2%) 0px 3px 14px 3px,
+    rgb(0 0 0 / 1%) 0px 8px 10px 1px;
 
-.book-data {
-  background-color: #80c4da14;
-  padding: 1.2rem;
-  border-radius: 1.2rem;
-  border: 1px solid #e3e3e3;
-}
-p {
-  line-height: 1.7;
-  color: rgb(94, 94, 94);
+  .book-data {
+    background-color: #80c4da14;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    border: 1px solid #e3e3e3;
+  }
+  p {
+    line-height: 1.7;
+    color: rgb(94, 94, 94);
+  }
+  .text-data {
+    font-weight: 800;
+    font-size: 1rem;
+  }
 
-}
-.text-data {
-font-weight: 800;
-font-size: 1rem;
-}
+  .text-date {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 
-.text-date {
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-hr {
-width: 100%;
-border: 1px solid #ddd;
-align-self: center;
-}
-
+  hr {
+    width: 100%;
+    border: 1px solid #ddd;
+    align-self: center;
+  }
 }
 
 .book-card-buttons {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.delete-icon {
-  cursor: pointer;
-  font-size: 2rem;
-  color: rgb(248, 125, 125);
-  background-color: rgba(248, 125, 125, 0.277);
-  padding: 0.4rem;
-  border-radius: 0.3rem;
-  &:hover {
-    transform: scale(1.1);
+  .delete-icon {
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgb(248, 125, 125);
+    background-color: rgba(248, 125, 125, 0.277);
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .edit-icon {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #80c4da;
+    background-color: #80c4da36;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
-.edit-icon {
-  cursor: pointer;
-  font-size: 2rem;
-  color: #80c4da;
-  background-color: #80c4da36;
-  padding: 0.4rem;
-  border-radius: 0.3rem;
-  &:hover {
-    transform: scale(1.1);
+@keyframes pan {
+  100% {
+      background-position: 25% 50%;
   }
-}
-
 }
